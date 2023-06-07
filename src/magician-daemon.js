@@ -8,7 +8,7 @@ export default class MagicianDaemon {
   }
 
   get attack() {
-    return this._attack * (100 - distance * 10) / 100;
+    return this._attack * ((100 - distance * 10) / 100);
   }
 
   set attack(value) {
@@ -25,9 +25,3 @@ export default class MagicianDaemon {
 }
 
 const mag = new MagicianDaemon();
-/*console.log(mag.attack);
-mag.attack = 20;
-console.log(mag.attack);
-console.log(mag.stoned);
-mag.stoned = 1;
-console.log(mag.stoned);*/
