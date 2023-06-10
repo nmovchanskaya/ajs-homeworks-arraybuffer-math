@@ -8,7 +8,7 @@ export default class MagicianDaemon {
   }
 
   get attack() {
-    return this._attack * ((100 - distance * 10) / 100);
+    return this._attack * ((100 - distance * 10) / 100) - this._stoned * Math.log2(distance) * 5;
   }
 
   set attack(value) {
@@ -16,7 +16,7 @@ export default class MagicianDaemon {
   }
 
   get stoned() {
-    return this.attack - this._stoned * Math.log2(distance) * 5;
+    return this._stoned;
   }
 
   set stoned(value) {

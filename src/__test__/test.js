@@ -14,13 +14,12 @@ test('test set attack', () => {
 
 test('test initial stoned', () => {
   const dm = new Daemon();
-  dm.attack = 20;
-  expect(dm.stoned).toBe(16);
+  expect(dm.stoned).toBe(0);
 });
 
 test('test set stoned', () => {
   const dm = new Daemon();
   dm.attack = 20;
   dm.stoned = 1;
-  expect(dm.stoned).toBe(11);
+  expect(dm.attack).toBe(11);
 });
